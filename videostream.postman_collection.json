@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "3b747ad2-a53e-4508-9f58-a0e8747c3be6",
+		"name": "videostream",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserRegistration",
+			"item": [
+				{
+					"name": "400",
+					"item": [
+						{
+							"name": "Register User - UserName with SpecialCharacters",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User$\",\n\t\"password\" : \"passwoR2\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - UserName with Space",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User Test\",\n\t\"password\" : \"passwoR2\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - Password without UpperCase",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User\",\n\t\"password\" : \"passw1rd\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - Password without Number",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User\",\n\t\"password\" : \"passworD\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - Password < 8",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User\",\n\t\"password\" : \"passwor\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - Invalid Email",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User\",\n\t\"password\" : \"passwoR4\",\n\t\"email\" : \"test2gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - Dob is empty",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User\",\n\t\"password\" : \"passwoR4\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - CCNumber < 16",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User2\",\n\t\"password\" : \"passwoR2\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\",\n\t\"ccNumber\" : \"123456781011314\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "201 & 200",
+					"item": [
+						{
+							"name": "Register New User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User2\",\n\t\"password\" : \"passwoR2\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\",\n\t\"ccNumber\" : \"1234567810121314\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve All Users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve All Users With Credit Card Number",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users?creditCard=yes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "creditCard",
+											"value": "yes"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve All Users Without Credit Card Number",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users?creditCard=no",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "creditCard",
+											"value": "no"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User - Without CCNumber",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User1\",\n\t\"password\" : \"passwoR2\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "403",
+					"item": [
+						{
+							"name": "Register User - Dob - Under 18",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User\",\n\t\"password\" : \"passwoR4\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"2015-07-16T19:23:51\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "409",
+					"item": [
+						{
+							"name": "Register Duplicate User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"userName\" : \"User2\",\n\t\"password\" : \"passwoR2\",\n\t\"email\" : \"test2@gmail.com\",\n\t\"dob\" : \"1989-07-16T19:23:51\",\n\t\"ccNumber\" : \"1234567810121314\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/videostream/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"videostream",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Payments-Invalid Amount - 400",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ccNumber\" : \"1234567810121314\",\n    \"amount\" : \"12\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/videostream/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"videostream",
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Payment Details - 201",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ccNumber\" : \"1234567810121314\",\n    \"amount\" : \"127\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/videostream/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"videostream",
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Payment Details - 404",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ccNumber\" : \"1234567810121314\",\n    \"amount\" : \"12\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/videostream/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"videostream",
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payments - Invalid Credit Card Number - 400",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ccNumber\" : \"12\",\n    \"amount\" : \"100\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/videostream/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"videostream",
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

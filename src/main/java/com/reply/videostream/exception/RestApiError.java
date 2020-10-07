@@ -18,16 +18,11 @@ public class RestApiError {
 
     private HttpStatus status;
     private String message;
-    private String debugMessage;
+    private String errorMessage;
 
-    RestApiError(HttpStatus status, String message) {
+    RestApiError(HttpStatus status, String errorMessage) {
         this.status = status;
-        this.message = message;
-    }
-
-    public RestApiError(HttpStatus status, String message, String debugMessage) {
-        this(status, message);
-        this.debugMessage = debugMessage;
+        this.errorMessage = errorMessage;
     }
 
 }

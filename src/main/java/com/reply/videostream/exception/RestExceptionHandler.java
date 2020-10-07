@@ -31,7 +31,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         List<String> errorList = ex.getBindingResult().getFieldErrors().stream()
                 .map(error -> error.getObjectName() + ":" + error.getDefaultMessage())
                 .collect(Collectors.toList());
-        return buildResponseEntity(new RestApiError(status.BAD_REQUEST, ex.getBindingResult().getObjectName(), errorList.toString()));
+        return buildResponseEntity(new RestApiError(status.BAD_REQUEST, errorList.toString()));
     }
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
