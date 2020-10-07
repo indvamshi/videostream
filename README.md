@@ -1,15 +1,20 @@
 # Getting Started
 This exercise is built by using Java8,SpringBoot and Gradle.
 
-### Executing Application
+### Prerequisite
+* Minimum Java 8 
+
+
+### Executing Application from IDE
 Follow below steps to execute application
 * Import the gradle project onto your Java IDE
 * Run clean build to execute tests.
 * Open Class VideostreamApplication which is under pkg -> com.reply.videostream
 and run as standalone Java Application.
 * Use post man to call RESTful services.
-or
-* Take the jar file from the root folder and execute the command
+
+### Executing Application terminal/command line
+* Goto the project directory and execute below command
 java -jar videostream-0.0.1-SNAPSHOT.jar
 
 ### RESTful api calls for User endpoint
