@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("paymentService")
-public class PaymentServiceImpl implements PaymentService {
+public final class PaymentServiceImpl implements PaymentService {
 
     private final Log LOGGER = LogFactory.getLog(getClass());
 

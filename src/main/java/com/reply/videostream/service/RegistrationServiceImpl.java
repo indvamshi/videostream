@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("registrationService")
-public class RegistrationServiceImpl implements RegistrationService {
+public final class RegistrationServiceImpl implements RegistrationService {
 
     private final Log LOGGER = LogFactory.getLog(getClass());
 
