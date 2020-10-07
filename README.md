@@ -13,8 +13,8 @@ Follow below steps to execute application
 and run as standalone Java Application.
 * Use post man to call RESTful services.
 
-### Executing Application terminal/command line
-* Goto the project directory and execute below command
+### Executing Application from terminal/command line
+* Goto the project directory and execute command
 java -jar videostream-0.0.1-SNAPSHOT.jar
 
 ### RESTful api calls for User endpoint
